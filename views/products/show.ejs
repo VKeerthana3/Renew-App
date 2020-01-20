@@ -1,0 +1,33 @@
+<%- include("../partials/header") %>
+<h3>
+	Products Show Page
+</h3>
+
+<div class="thumbnail col-lg-3">
+<div>
+	<strong>Product Id: </strong><%= product.id%>
+
+</div>
+<div>
+	<strong>Product Name: </strong><%= product.name%>
+
+</div>
+<div>
+	<strong>Product Price: </strong><%= product.price%>
+
+</div>
+<div>
+	<strong>Product Stock: </strong><%= product.stock%>
+</div>
+	<a href="/products/<%= product._id%>/edit" class="btn btn-warning">Edit</a>
+	</div>
+
+<div>
+<form action="/products/<%= product._id%>?_method=DELETE" method="POST" >
+	<button>
+		Delete
+	</button>
+</form>
+</div>
+
+<%- include("../partials/footer")%>

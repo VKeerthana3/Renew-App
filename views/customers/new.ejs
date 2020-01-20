@@ -1,0 +1,45 @@
+<%- include("../partials/header") %>
+<h2>
+	Add new Customer
+</h2>
+
+<form method="POST" action="/customers">
+	<div class="row">
+		<div class="form-group col-lg-6">
+		<label for="id">Id: </label>
+	<input class="form-control" id="id" type="Number" placeholder="id" min="0" name="customers[id]">
+	</div>
+	</div>
+	
+	<div class="row">
+		<div class="form-group col-lg-6">
+		<label for="name">Name: </label>
+	<input class="form-control" id="name" type="String" placeholder="name" name="customers[name]">
+	</div>
+	</div>
+	
+	<div class="row">
+		<div class="form-group col-lg-6">
+		<label for="phone">Phone: </label>
+	<input class="form-control" id="phone" type="String" placeholder="phone" name="customers[phone]">
+	</div>
+	</div>
+	
+	<div class="row">
+		<div class="form-group col-lg-6">
+		<label for="email">Email: </label>
+	<input class="form-control" id="email" type="String" placeholder="email" name="customers[email]">
+	</div>
+	</div>
+	
+	
+	
+		<button class="btn btn-success">
+		Submit
+	</button>
+	
+	
+</form>
+
+<%- include("../partials/footer") %>
+

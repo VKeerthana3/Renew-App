@@ -1,0 +1,18 @@
+<%- include("../partials/header")%>
+
+<h4>
+	Add Customer Code to Order 
+</h4>
+
+<form action="/orders/<%=order._id%>/customer" method="POST" id="form">
+	<div>
+		<label for="id">Customer Id: </label>
+		<input id="id" type="number" placeholder="id" min="0" name="customer[id]">
+</div>
+	<button class="btn btn-success">
+		Submit
+	</button>
+</form>
+
+
+<%- include("../partials/footer")%>

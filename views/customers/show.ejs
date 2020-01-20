@@ -1,0 +1,30 @@
+<%- include("../partials/header")%>
+
+<header class="jumbotron">
+<h3>
+	Customers Show Page
+</h3>
+	</header>
+
+<div class="thumbnail col-lg-3 show">
+	
+	<div>
+		<strong>Customer Id:</strong> <span class="right"><%= customer.id%></span>
+</div>
+<div>
+	<strong>Name: </strong><span class="right2"><%= customer.name%></span>
+</div>
+<div>
+	<strong>Phone: </strong><span class="right2"><%= customer.phone%></span>
+</div>
+<div>
+	<strong>Email: </strong><span class="right2"> <%= customer.email%></span>
+</div>
+	<a href="/customers/<%= customer._id%>/edit" class="btn btn-warning">Edit</a>
+</div>
+
+
+<%- include("../partials/footer")%>
+
+
+

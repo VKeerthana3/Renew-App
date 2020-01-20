@@ -1,0 +1,35 @@
+<%- include("partials/header")%>
+
+<h2>
+	Sales
+</h2>
+
+<% sales.forEach(function(sales){ %>
+
+<div>
+	Id: <%= sales.id %>
+</div>
+
+<div>
+	Name: <%= sales.name %>
+</div>
+
+<div>
+	Phone: <%= sales.phone %>
+</div>
+
+<div>
+	Email: <%= sales.email %>
+</div>
+<div>
+	<a href="/sales/<%= sales._id%>">Read More</a>
+</div>
+
+<% }); %>
+
+
+
+<a href="/sales/new">Add New SalesPerson</a>
+
+<%- include("partials/footer")%>
+

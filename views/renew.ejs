@@ -1,0 +1,21 @@
+<%- include("partials/header")%>
+
+<h2>
+	Renewals Page
+</h2>
+
+
+<% for(var i = 0; i < product.length; i++){ %>
+<div class="container col-md-3 " >
+
+<div>
+	Product Name: <%= product[i].name%>
+</div>
+<div>
+<%= product[i].name %> expires in <%= Math.floor((product[i].renewDate - new Date())/ (1000*3600*24)) %> days
+</div>	
+	</div>
+
+	<% } %>
+
+<%- include("partials/footer")%>

@@ -1,0 +1,27 @@
+<%- include("../partials/header") %>
+
+<h2>
+New Page
+</h2>
+
+<form class="form-group" method="POST" action="/orders">
+	<div>
+		<label for="id">Id: </label>
+	<input class="form-control" type="number" id="id" placeholder="id" name="orders[id]">
+	</div>
+	
+	<div>
+		<label for="date" class="form-group"></label>
+	<input type="date" class="form-control" id="date" placeholder="date" name="orders[date]">
+	</div>
+	
+	<div>
+		<button class="btn btn-success">
+		Submit
+	</button>
+	</div>
+	
+	
+</form>
+
+<%- include("../partials/footer")%>

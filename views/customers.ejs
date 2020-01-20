@@ -1,0 +1,34 @@
+<%- include("partials/header")%>
+
+<h2>
+	Customers
+</h2>
+
+<% customers.forEach(function(customers){ %>
+
+<div>
+	Id: <%= customers.id %>
+</div>
+
+<div>
+	Name: <%= customers.name %>
+</div>
+
+<div>
+	Phone: <%= customers.phone %>
+</div>
+
+<div>
+	Email: <%= customers.email %>
+</div>
+<div>
+	<a href="/customers/<%=customers._id%>">Read More</a>
+</div>
+	
+<% }); %>
+
+<div>
+	<a href="/customers/new" class="btn btn-primary">Add new Customer</a>
+</div>
+
+<%- include("partials/footer")%>

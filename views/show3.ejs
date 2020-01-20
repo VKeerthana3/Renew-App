@@ -1,0 +1,66 @@
+<%- include("partials/header") %>
+
+<h2>
+	Show Page
+</h2>
+
+<!-- <div>
+	<%= data%>
+</div>
+ -->
+<div>
+		Invoice Number: <%= data.id%>
+	
+</div>
+<div>
+	
+	Date:<%= data.date.toDateString()%>
+	
+</div>
+<div>
+	<% if(typeof data.customer != "undefined"){ %>
+	Customer: <%= data.customer.name%>
+	<% } %>
+</div>
+<div>
+	<% if(typeof data.sales != "undefined"){ %>
+	SalesPerson:<%= data.sales.name%>
+	<% } %>
+
+</div>
+<div>
+	Products:
+	
+	<div>
+
+		<% for(var i = 0; i< data.product.length; i++){ %>
+		<div>
+	 <%= i+1 %>. Product Name: <%= data.product[i]._id.name; %>
+			<p> Quantity: <%= data.product[i].quantity%> </p>
+			 </div>
+
+		<% } %>
+		 </div>
+</div>
+<p>
+
+	<a href="/orders/<%= data._id%>/sales/add">Add Sales Person Id to Order</a>
+
+</p>
+
+<p>
+
+	<a href="/orders/<%= data._id%>/customer/add">Add Customer Id to Order</a>
+
+</p>
+
+
+<a href="/orders/<%= data._id%>/products/new">Add new Product to order</a>
+
+
+
+
+<p><a href="/orders/<%= data._id%>/edit">Edit</a></p>
+
+
+<%- include("partials/footer")%>

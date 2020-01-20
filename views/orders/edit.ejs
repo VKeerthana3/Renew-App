@@ -1,0 +1,22 @@
+<%- include("../partials/header")%>
+
+<h2>
+	Edit Order Number <%=order.id%>
+</h2>
+
+<form action="/orders/<%=order._id%>?_method=PUT" method="POST">
+	<div>
+		<label for="customer id">Customer Id:</label>
+		<input id="customer id" type="text" value="<%= order.customer.name%>" name="orders[customer].name">
+	</div>
+	<div>
+		<label for="sales id">Sales Person Name:</label>
+		<input id="sales id" type="text" value="<%= order.sales.name%>" name="orders[sales].name">
+	</div>
+	
+	<button class="btn btn-success">
+		Submit
+	</button>
+</form>
+
+<%- include("../partials/footer")%>

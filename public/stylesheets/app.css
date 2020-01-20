@@ -1,0 +1,44 @@
+h2{
+	text-align: center;	
+}
+
+#form{
+	
+	margin-left: 500px;
+}
+
+.show{
+	line-height: 25px;
+	text-align: left;
+}
+
+.right{
+	padding-left: 200px;
+}
+
+.right2{
+	padding-left: 160px;
+}
+
+.btn{
+	
+	text-transform: uppercase;
+}
+
+.btn-warning{
+	width: 25%;
+}
+
+.btn-info{
+	margin: auto auto  20px auto; 
+	width: 200px;
+}
+
+.btn-primary{
+	width: 20%:
+}
+
+.thumbnail{
+	/*width: 25%; */
+	margin: 20px;
+}

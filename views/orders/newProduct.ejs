@@ -1,0 +1,24 @@
+<%- include("../partials/header")%>
+
+<h2>
+	Add new Product to Order Number: <%= order.id%>
+</h2>
+
+<form action="/orders/<%=order._id%>/products" method="POST" id="form">
+	<div>
+	<label for="id">Product Id: </label>
+	<input id="id" type="number" placeholder="id" min="0" name="products[id]">
+</div>
+	<div>
+	<label for="quantity">Quantity: </label>
+	<input id="quantity" type="number" placeholder="quantity" min="0" name="products[quantity]">
+</div>
+	
+	
+	
+	<button class="btn btn-success">
+		Submit
+	</button>
+</form>
+
+<%- include("../partials/footer")%>

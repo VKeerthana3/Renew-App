@@ -1,0 +1,35 @@
+<%- include("../partials/header")%>
+
+<h2>
+	Customer Edit Page
+</h2>
+
+<form action="/customers/<%= customer._id%>?_method=PUT" method="POST">
+	
+	<div class="row">
+		<div class="form-group col-lg-6">
+		<label for="name">Name: </label>
+	<input class="form-control" id="name" type="String" value="<%= customer.name%>" name="customers[name]">
+	</div>
+	</div>
+	
+	<div class="row">
+		<div class="form-group col-lg-6">
+		<label for="phone">Phone: </label>
+	<input class="form-control" id="phone" type="String" value="<%= customer.phone%>" name="customers[phone]">
+	</div>
+	</div>
+	
+	<div class="row">
+		<div class="form-group col-lg-6">
+		<label for="email">Email: </label>
+	<input class="form-control" id="email" type="String" value="<%= customer.email%>" name="customers[email]">
+	</div>
+	</div>
+	
+		<button class="btn btn-success">
+		Submit
+	</button>
+</form>
+
+<%- include("../partials/footer")%>

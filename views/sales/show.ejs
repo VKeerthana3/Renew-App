@@ -1,0 +1,26 @@
+<%- include("../partials/header")%>
+
+<h3>
+	Sales Show Page
+</h3>
+
+<div class="thumbnail col-lg-3">
+<div>
+	<strong>Id: </strong><%= sales.id%>
+</div>
+<div>
+	<strong>Name: </strong><%= sales.name%>
+</div>
+<div>
+	<strong>Phone: </strong><%= sales.phone%>
+</div>
+<div>
+	<strong>Email: </strong><%= sales.email%>
+</div>
+<div>
+	<a href="/sales/<%= sales._id%>/edit" class="btn btn-warning">Edit</a>
+</div>
+</div>
+
+<%- include("../partials/footer")%>
+

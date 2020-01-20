@@ -1,0 +1,56 @@
+<%- include("../partials/header")%>
+
+<h2>
+	User Profile
+</h2>
+
+<h4>
+	Profile Details
+</h4>
+<div>
+Id: <%= user.id%>
+	 </div>
+<div>
+	Name: <%= user.name%>
+</div>
+<div>
+	Email: <%= user.email%>
+</div>
+<div>
+	Phone: <%= user.phone%>
+</div>
+
+<h4>
+	Orders
+</h4>
+
+<% if(typeof order != "undefined"){ %>
+
+<% order.forEach(function(ord){ %>
+
+
+<div>
+	Order Id: <%= ord.id %>
+</div>
+<div>
+	Order Date: <%= ord.date.toDateString() %>
+</div>
+<div>
+	Customer: <%= ord.customer %>
+</div>
+<div>
+	Products:
+	<% for(var i = 0; i < ord.product.length; i++){%>
+	<%= ord.product[i]._id.name %>
+	<% } %>
+	
+</div>
+
+<% }) %>
+<% } else { %>
+<div>
+	No orders to display
+</div>
+<% } %>
+
+<%- include("../partials/footer")%>

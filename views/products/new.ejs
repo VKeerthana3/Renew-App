@@ -1,0 +1,63 @@
+<%- include("../partials/header")%>
+
+<h2>
+	Add a New Product
+</h2>
+
+<form action="/products" method="POST" id="form">
+	<div class="row">
+	<div class="form-group col-lg-6">
+		<label for="id">Id</label>
+		<input id="id" type="number" min="0" class="form-control" placeholder="Id" name="products[id]">
+	</div>
+		</div>
+	
+	<div class="row">
+	<div class="form-group col-lg-6">
+		<label for="name">Name</label>
+		<input id="name" class="form-control" type="text" placeholder="name" name="products[name]">
+	</div>
+	</div>
+	
+	
+	<div class="row">
+	<div class="form-group col-lg-6">
+		<label for="price">Price</label>
+		<input id="price" type="number" class="form-control" placeholder="price" name="products[price]">
+		</div>
+	</div>
+	
+	<div class="row">
+	<div class="form-group col-lg-6">
+		<label for="stock">Stock</label>
+		<input id="stock" type="number" class="form-control" placeholder="stock" name="products[stock]">
+	</div>
+	</div>
+	
+	<div>
+		<p>
+			Renew:
+		</p>
+	<div class="form-group">
+		<label for="renew">True</label>
+		<input id="renew" type="radio" name="products[renew]" value="true">
+		
+		<label for="renew">False</label>
+		<input id="renew" type="radio" name="products[renew]" value="false">
+	</div>
+		
+	</div>
+	
+	<div class="row">
+	<div class="form-group col-lg-6">
+		<label for="renewDate"></label>
+		<input id="renewDate" class="form-control" type="date" placeholder="renew Date" name="products[renewDate]">
+	</div>
+	</div>
+		
+	<button class="btn btn-success">
+		Submit
+	</button>
+</form>
+
+<%- include("../partials/footer")%>
