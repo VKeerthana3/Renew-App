@@ -22,5 +22,11 @@
 </div>
 </div>
 
+<form method="POST" action="/sales/<%= sale._id%>?_method=DELETE">
+		<button class="btn btn-danger">
+			Delete
+		</button>
+	</form>
+
 <%- include("../partials/footer")%>
 
