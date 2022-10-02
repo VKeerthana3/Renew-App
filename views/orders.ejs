@@ -14,7 +14,7 @@
 	Date: <%= order.date.toDateString()%>
 </div>
 <div>
-	<% if(typeof order.sales != "undefined"){ %>
+	<% if(typeof order.sales != "undefined" & null){ %>
 		Sales ID: <%= order.sales.id%>
 	<% } %>
 	
